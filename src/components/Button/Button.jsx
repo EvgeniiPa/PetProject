@@ -1,4 +1,4 @@
-export default function Button({text, onClick}){
+export default function Button({text, onClick, className}){
     return(
         <button 
             onClick={()=>{onClick()}}
