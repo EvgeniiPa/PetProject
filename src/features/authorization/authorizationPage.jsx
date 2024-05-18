@@ -1,8 +1,8 @@
 import { useState } from "react"
-import Button from "../../components/Button/Button"
-import InputField from "../../components/InputField/InputField"
+import Button from "../../entities/Button/Button"
+import InputField from "../../entities/InputField/InputField"
 import { useDispatch } from "react-redux"
-import {closePage} from '../../store/authorizationSlice'
+import {closePage} from '../../app/store/authorizationSlice'
 
 export default function AuthorizationPage(){
     const [login, setLogin] = useState('')
