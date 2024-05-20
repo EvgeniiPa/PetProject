@@ -8,6 +8,9 @@ export default {
     extend: {
       backgroundImage:{
         'authorization': "url('https://images.wallpaperscraft.ru/image/single/paporotnik_listia_zelenyj_134531_1920x1080.jpg)",
+      },
+      height:{
+        'wrapper': 'calc(100vh - 40px)'
       }
     },
   },
