@@ -9,11 +9,9 @@ const authorizationSlice = createSlice({
     reducers:{
         openPage: state => {
             state.authorizationPage = true
-            console.log('TAM')
         },
         closePage: state => {
             state.authorizationPage = false
-            console.log("TUT")
         }
     }
 })
