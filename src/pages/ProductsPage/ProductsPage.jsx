@@ -34,7 +34,7 @@ export default function ProductsPage(){
                     })
                 }
             </div>
-            <div className="flex flex-wrap justify-start gap-6  mt-10 m-auto">
+            <div className="flex flex-wrap justify-center gap-6  mt-10 m-auto">
                 {products.length !== 0  && products.map(item =>{
                         return(
                             <Clothes item={item} key={item.id}/>
