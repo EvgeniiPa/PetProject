@@ -2,7 +2,7 @@ import AuthorizationPage from "./features/authorization/authorizationPage"
 import Layuot from "./pages/Layout/Layout"
 import ProductsPage from "./pages/ProductsPage/ProductsPage"
 import Contacts from "./pages/Contacts/Contacts"
-import TodoList from "./pages/TodoList/TodoList"
+import AboutPage from "./pages/AboutPage/AboutPage"
 import { Route, Routes} from 'react-router-dom'
 import { useSelector } from "react-redux"
 
@@ -14,9 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layuot/>}>
           <Route index element={<ProductsPage/>}/>
-          <Route path="/TodoList" element={<TodoList/>}/>
+          <Route path="/TodoList" element={<AboutPage/>}/>
           <Route path="/Contacts" element={<Contacts/>}/>
-          <Route path="/*" element={<></>}/>
+          <Route path="/*" element={<>FFFFFFFFFFFFFFFFF</>}/>
         </Route>
       </Routes>    
     </>

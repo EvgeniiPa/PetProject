@@ -24,6 +24,7 @@ export default {
         'descriptionCard': '600px',
       },
       zIndex:{
+        'miunsOne': '-1',
         '1': '1',
         '2': '2',
       }

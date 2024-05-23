@@ -5,7 +5,7 @@ export const fetchProducts = createAsyncThunk(
     'products/fetchProducts',
     async function(id, {rejectWithValue, dispatch}){
         try{
-            const res = await axios.get(`https://api.escuelajs.co/api/v1/categories/${id}/products?_limit=5`)
+            const res = await axios.get(`https://api.escuelajs.co/api/v1/categories/${id}/products`)
             return res.data
         }catch(err){
             rejectWithValue(err.messege)
