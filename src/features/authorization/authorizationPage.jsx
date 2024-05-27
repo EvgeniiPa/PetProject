@@ -3,8 +3,8 @@ import Button from "../../entities/Button/Button"
 import InputField from "../../entities/InputField/InputField"
 import { useDispatch } from "react-redux"
 import {closePage, openPage} from '../../app/store/authorizationSlice'
-import Smile from './Smile.svg'
-import Cross from './CrossAuthorization.svg'
+import Smile from '../images/SmileAuthorization.svg'
+import Cross from '../images/Cross.svg'
 
 export default function AuthorizationPage(){
     const [login, setLogin] = useState('')
@@ -66,7 +66,7 @@ export default function AuthorizationPage(){
         <main className="flex justify-center w-full h-screen bg-gren-700 bg-authorization fixed  top-0 left-0">
             <div className="bg-gray-300 absolute top-0 left-0 opacity-50 w-screen h-screen z-0"></div>
             <div className="flex flex-col gap-3 justify-between items-center w-96 m-auto bg-gray-400 rounded border-stale-500 border-2 z-2">
-                <div className="flex justify-end 0 w-full" >
+                <div className="flex justify-end  w-full" >
                         <img src={Cross} alt="closeCross"  className="w-10 transition: duration-500 hover:scale-125" onClick={()=> dispatch(openPage())}/>
                 </div>
                 {checkUser ? 

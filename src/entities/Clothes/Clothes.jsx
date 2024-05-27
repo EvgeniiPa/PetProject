@@ -1,12 +1,17 @@
 import { useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { setCart } from '../../app/store/shoppingCartSlice'
 import Cross from './CrossInCard.svg'
 import Button from '../Button/Button'
+
 
 
 
 export default function Clothes({item}){
     const [showDescription, setShowDescription] = useState(false)
     const [mainImage, setMainImage] = useState(null)
+    const { shoppingStore } = useSelector(state => state.shoppingCartList)
+    const dispatch = useDispatch()
 
     function openDiscription(){
         setShowDescription(true)
@@ -21,7 +26,7 @@ export default function Clothes({item}){
         console.log("ID", id)
         setMainImage(item.images[id])
     }
-   
+
     return(
         <div>
               <div onClick={()=>openDiscription()}  className="flex flex-col items-center justify-between w-60  bg-gray-200 border-2 rounded-3xl transition duration-750 hover:scale-105 duration-300">         
@@ -52,7 +57,10 @@ export default function Clothes({item}){
                                             </div>
                                         )
                                     })}
-                                    <Button text='Pay' pay={true}/>
+                                    <Button text='Pay' pay={true} onClick={()=>{
+                                        dispatch(setCart(item))
+                                        console.log(shoppingStore,'aaaaa')
+                                        }}/>
                                 </div>    
                             </div>
                         </div>
