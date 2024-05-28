@@ -60,7 +60,7 @@ export default function ProductsPage(){
                 </div>
                 <img src={Right} alt="leftArrow" onClick={()=>nextCategori()} className="w-20"/>
             </div>
-            <div className="flex flex-wrap justify-center gap-6  my-20 m-auto">
+            <div className="flex flex-wrap justify-center gap-6  my-20 m-auto ">
                 {products.length !== 0  && products.map(item =>{
                         return(
                             <Clothes item={item} key={item.id}/>

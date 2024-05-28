@@ -49,7 +49,7 @@ export default function Clothes({item}){
                                     <img src={mainImage} alt="main image" className="rounded rounded-b-none transition: duration-500 hover:scale-110 "/>
                                     <div className="text-white font-medium text-justify">{item.description}</div>
                                 </div>
-                                <div className="flex flex-col gap-1 ml-1 max-w-40 ">
+                                <div className="flex flex-col gap-1 ml-1 max-w-40 z-0">
                                     { item.images.map((item, index)=>{
                                         return(
                                             <div onClick={()=>showImage(index)} className="rounded transition: duration-500 hover:scale-110" key={index} >
@@ -57,10 +57,7 @@ export default function Clothes({item}){
                                             </div>
                                         )
                                     })}
-                                    <Button text='Pay' pay={true} onClick={()=>{
-                                        dispatch(setCart(item))
-                                        console.log(shoppingStore,'aaaaa')
-                                        }}/>
+                                    <Button text='Pay' pay={true} onClick={()=>dispatch(setCart(item))}/>
                                 </div>    
                             </div>
                         </div>

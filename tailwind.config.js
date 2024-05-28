@@ -14,7 +14,8 @@ export default {
         'min-screen' : 'calc',
       },
       minHeight:{
-        "layout":"calc(100vh - 0px)"
+        "layout":"calc(100vh - 0px)",
+        "shopCart":"calc(100vh - 40px)",
       },
       width:{
         
