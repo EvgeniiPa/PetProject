@@ -34,7 +34,8 @@ export default function Layuot(){
                             <div className='flex flex-col gap-4 justify-start p-4'>
                             <span onClick={()=>setToggleMenu(false)} className='uppercase transition: duration-500 hover:scale-110 hover:text-gray-800'> <Link to="/">Каталог</Link></span> 
                             <span onClick={()=>setToggleMenu(false)} className='uppercase transition: duration-500 hover:scale-110 hover:text-gray-800'> <Link to="/todoList">О нас</Link></span> 
-                            <span onClick={()=>setToggleMenu(false)} className='uppercase transition: duration-500 hover:scale-110 hover:text-gray-800'> <Link to="/contacts" >Контакты</Link></span>       
+                            <span onClick={()=>setToggleMenu(false)} className='uppercase transition: duration-500 hover:scale-110 hover:text-gray-800'> <Link to="/contacts" >Контакты</Link></span>    
+                            <span onClick={()=>setToggleMenu(false)} className='uppercase transition: duration-500 hover:scale-110 hover:text-gray-800'> <Link to="/shoplist">Корзина</Link></span>    
                             </div>
                         {authorizationPage && <Button onClick={()=>dispatch(closePage())} text='Авторизоваться' />}
                         {!authorizationPage && <Button onClick={()=>dispatch(openPage())} text='Выход' />}
