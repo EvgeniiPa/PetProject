@@ -6,7 +6,6 @@ import { removeProductsList } from '../../app/store/productsSlice.js'
 import BurgerMenu from './BurgerMenu.jsx'
 import Button from '../../entities/Button/Button.jsx'
 import AuthorizationPage from '../../features/authorization/authorizationPage.jsx'
-import ShoppingCart from '../../features/ShoppingCart/ShoppingCart.jsx'
 import Cross from './images/Cross.svg'
 import Favicon from './images/Favicon.svg'
 import Arrow from './images/LinkArrow.svg'
@@ -27,8 +26,7 @@ export default function Layuot(){
                      <Link to="/"><img src={Favicon} alt="favicon"/></Link>       
                 </div>
                 <div className='flex gap-5'>
-                    <img src={ShoppingCartIMG} alt="shoppingCart" className='w-10 transition: duration-500 hover:scale-110' onClick={()=>dispatch(openShoppingPage())}/>
-                    {status && <ShoppingCart/>}
+                    <Link to="/shoplist"><img src={ShoppingCartIMG} alt="shoppingCart" className='w-10 transition: duration-500 hover:scale-110' onClick={()=>dispatch(openShoppingPage())}/></Link>
                     {!toggleMenu && <BurgerMenu width='40px' onClick={()=>setToggleMenu(true)}/>}
                     {toggleMenu && 
                     <nav className='flex justify-between items-between text-gray bg-gray-200 absolute right-0 rounded shadow-xl'>
